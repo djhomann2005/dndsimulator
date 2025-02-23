@@ -1,0 +1,26 @@
+{
+  "name": "dndsimulator",
+  "version": "1.0.0",
+  "description": "Program for simulating D&amp;D combat",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djhomann2005/dndsimulator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djhomann2005/dndsimulator/issues"
+  },
+  "homepage": "https://github.com/djhomann2005/dndsimulator#readme",
+  "devDependencies": {
+    "mocha": "^11.1.0"
+  }
+}
