@@ -1,0 +1,51 @@
+The intention of this program is to be able to simulate D&D combat encounters. In order to do this,
+the program needs many things: (looking at this from the end to the beginning)
+
+1. Display results of combat  
+    -Who won and who lost
+    -Who is dead, incapacitated, and still conscious
+    -What conditions (if any) are present on those alive
+    -What are the important stats of relevant participants
+        -Hit points
+        -Spell slots (how many of each level)
+        -Remaining ammunition
+        -Any consumables used
+    -Interesting stats to be able to analyze performance
+        -Damage inflicted
+        -Damage taken
+        -Hit points healed
+        -Attack roll numbers and success percentage
+        -Spell attack numbers and success percentage
+        -Number of rounds
+
+2. Simulate combat
+    -Determine order of attacks
+        -Roll initiative for each character 
+            -Roll a d20
+            -Add initiative modifiers
+        -Order characters from highest initiative to lowest
+    -Execute attacks
+        -Determine if attack is successful
+        -Update relevant character stats based on attack
+    -Iterate through each character in turn until all characters on one side are eliminated
+
+3. Characters & Mobs
+    -Classes of character types
+    -Relevant charater stats
+        -Ability scores & modifiers
+        -Initiative
+        -Hit points
+        -Spell slots & levels
+    -Spells available
+    -Weapons available
+
+5. List of spells & their functions
+
+6. List of weapons
+
+7. Ability to calculate important character stats
+
+8. Ability to simulate random rolls of the various dice
+    -d100, d20, d12, d10, d8, d6, d4
+    -If multiple dice rolls are required
+    
