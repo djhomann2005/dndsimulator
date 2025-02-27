@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <script type="module" src="/test/dice_rolls_test.js"></script>
+    <script src="/scripts/dice_rolls.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="header-cont container">
+            <div class="logo-cont container">
+                <img class="logo" src="/img/Banner_Design_1.png">
+            </div>
+            <div class="nav-cont container">
+                <ul>
+                    <li>Home</li>
+                    <li>Dice Roller</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Dice Roller</h1>
+        <div class="main-selector">
+            <label for="number-dice">How many dice to roll total?</label>
+            <input type="number" name="number-dice" id="number-dice" min="1" value="1">
+            <button class="btn" id="num-dice-btn" onclick="numDiceSelect()">Select</button>
+        </div>
+        <div class="dice-cont container"> <!-- should be hidden to start -->
+            <h2>Dice Rolls</h2>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-cont container">
+        </div>
+    </footer>
+</body>
+</html>
