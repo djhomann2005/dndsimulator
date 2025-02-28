@@ -6,36 +6,42 @@
     <title>Dice Roller</title>
     <script type="module" src="/test/dice_rolls_test.js"></script>
     <script src="/scripts/dice_rolls.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <nav>
-        <div class="header-cont container">
-            <div class="logo-cont container">
-                <img class="logo" src="/img/Banner_Design_1.png">
+        <div class="header-cont flex">
+            <div class="logo-cont">
+                <a href="https://www.youtube.com/channel/UC7vkcHlQgZJFYHhbwLdfRTg" target="_blank">
+                    <img class="logo" src="/img/Banner_Design_1.png">
+                </a>
             </div>
-            <div class="nav-cont container">
-                <ul>
-                    <li>Home</li>
-                    <li>Dice Roller</li>
+            <div class="nav-cont almendra-bold">
+                <ul class="flex list-cont">
+                    <a href="/index.html"><li>Home</li></a>
+                    <a href="/dice_roller.html"><li>Dice Roller</li></a>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main>
-        <h1>Dice Roller</h1>
-        <div class="main-selector">
-            <label for="number-dice">How many dice to roll total?</label>
+        <h1 class="pirata-one-regular">Dice Roller</h1>
+        <div class="main-selector almendra-regular">
+            <label for="number-dice" class="label">How many dice to roll total?</label>
             <input type="number" name="number-dice" id="number-dice" min="1" value="1">
-            <button class="btn" id="num-dice-btn" onclick="numDiceSelect()">Select</button>
+            <button class="btn almendra-regular" id="num-dice-btn" onclick="numDiceSelect()">Select</button>
         </div>
-        <div class="dice-cont container"> <!-- should be hidden to start -->
-            <h2>Dice Rolls</h2>
+        <div class="dice-cont"> <!-- should be hidden to start -->
+            <h2 class="pirata-one-regular">Dice Rolls</h2>
         </div>
     </main>
 
     <footer>
-        <div class="footer-cont container">
+        <div class="footer-cont">
         </div>
     </footer>
 </body>
