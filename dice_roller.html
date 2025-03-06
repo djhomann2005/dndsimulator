@@ -30,13 +30,23 @@
 
     <main>
         <h1 class="pirata-one-regular">Dice Roller</h1>
+
         <div class="main-selector almendra-regular">
             <label for="number-dice" class="label">How many dice to roll total?</label>
             <input type="number" name="number-dice" id="number-dice" min="1" value="1">
             <button class="btn almendra-regular" id="num-dice-btn" onclick="numDiceSelect()">Select</button>
         </div>
-        <div class="dice-cont"> <!-- should be hidden to start -->
+
+        <div class="container" id="roll-container">
             <h2 class="pirata-one-regular">Dice Rolls</h2>
+            <div class="dice-cont" id="dice-container"> <!-- should be hidden to start -->
+                
+            </div>
+            <div id="roll-button-cont">
+                <button id="roll-button" class="btn almendra-regular" onclick="rollDice()">
+                    Roll Dice
+                </button>
+            </div>
         </div>
     </main>
 
