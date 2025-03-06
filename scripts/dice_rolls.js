@@ -64,9 +64,54 @@ function numDiceSelect() {
 
 function rollDice() {
     // keep a running total of dice rolls
+    let diceSum = 0;
     // keep track of dice rolls individually
-    // get dieType (maximum) for each die 
+    let diceRolls = [];
+    const diceContainer = document.getElementById("dice-container");
+    const rollContainer = document.getElementById("roll-container");
+
+    Array.from(diceContainer.children).forEach(child => {
+        // Remove previous roll display (if exists)
+        let oldRollDisplay = child.querySelector(".roll-result");
+        if (oldRollDisplay) {
+            oldRollDisplay.remove();
+        }
+        
+        // get dieType (maximum) for each die 
+        const diceMaxValues = {
+            d4: 4,
+            d6: 6,
+            d8: 8,
+            d10: 10,
+            d12: 12,
+            d20: 20,
+            d100: 100
+        };
+        let selectElement = child.querySelector("select");
+        let maxRoll = diceMaxValues[selectElement.value] || null;
+
         // simulate the die roll
-            // record roll
-            // add roll to total
+        let dieRoll = Math.floor(Math.random() * maxRoll + 1);
+        // record roll
+        diceRolls.push(dieRoll);
+        // add roll to total
+        diceSum += dieRoll;
+
+        // display each roll in the box with the select
+        const rollDisplay = document.createElement("p");
+        rollDisplay.className = "roll-result";
+        rollDisplay.innerHTML = `Roll: ${dieRoll}`;
+        rollDisplay.style.flexBasis = "100%";
+        child.appendChild(rollDisplay);
+    });
+
+    const elementToRemove = document.getElementById("display-total");
+    if (elementToRemove) {
+        rollContainer.removeChild(elementToRemove);
+    }
+
+    const displaySum = document.createElement("p");
+    displaySum.id = "display-total";
+    displaySum.innerHTML = `Total: ${diceSum}`;
+    rollContainer.appendChild(displaySum);
 }
